@@ -1,0 +1,12 @@
+{
+  "app": {
+    "http": {
+      "port":9005
+    }
+  },
+  "business":{
+  	"business_base_url":"https://github.com/tech-magic/angular-with-nodejs/tree/master/mocks",
+    "rest_path":"/business/api",
+    "content_type": "application/json"
+  }
+}

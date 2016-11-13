@@ -1,0 +1,116 @@
+<div class="col-sm-3 box-number-kpi" ng-if="enabled">
+    <div class="{{flipClasses}}">
+        <div class="card">
+            <div class="face front">
+                <div class="flip_main">
+                    <div class="row">
+                        <div class="col-sm-12 kpi-header">
+                            <ul class="list-inline">
+                                <li align="left">
+                                    <h5>{{kpiInfo.kpiSettings.title}}
+                                    <span data-toggle="tooltip" data-placement="bottom" rel="tooltip" title="{{kpiInfo.kpiSettings.helpText}}"> &nbsp; <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
+                                    </h5></li>
+                                <li class="flip-btn"><img src="public/svg/turn-back.svg" ng-show="!isNotFlippable"/></li>
+                            </ul>
+                        </div>
+                        <!-- col-sm-10 kpi-header -->
+
+                        <div ng-show="kpiInfo.kpiData.loaded && !kpiInfo.kpiData.error">
+                            <div class="col-sm-12 kpi-body" ng-bind="kpiInfo.kpiData.primary.count | formatter: kpiInfo.kpiSettings.filter"></div>
+
+                            <div align="center" class="col-sm-12 kpi-footer" ng-show="!isNotFlippable">
+                                <span class="{{kpiInfo.kpiData.primary.trendDirectionCssCls}}"><img ng-src="{{kpiInfo.kpiData.primary.trendDirectionSvg}}"/> {{kpiInfo.kpiData.primary.trendAbsolute}}</span>
+                            </div>
+                            <!-- col-sm-12 kpi-footer -->
+                            <div align="center" class="col-sm-12 kpi-further"></div>
+                            <!-- col-sm-12 kpi-further -->
+                        </div>
+
+                        <div class="spinner" ng-hide="kpiInfo.kpiData.loaded">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div>
+						
+						<div ng-show="kpiInfo.kpiData.loaded && kpiInfo.kpiData.error">
+							<div class="col-sm-12 error-text"  style="">
+								<h4 class="ng-binding" >No data found!</h4>
+							</div>
+						</div>
+
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- flip_main -->
+            </div>
+            <!-- face front -->
+
+            <div class="face back" ng-show="!isNotFlippable">
+                <div class="flip_main">
+                    <div class="row">
+                        <div class="col-sm-12 kpi-header">
+                            <ul class="list-inline">
+                                <li>
+                                    <h5>{{kpiInfo.kpiSettings.title}}
+                                    <span data-toggle="tooltip" data-placement="bottom" rel="tooltip" title="{{kpiInfo.kpiSettings.helpText}}"> &nbsp; <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
+                                    </h5></li>
+                                <li class="flip-btn"><img src="public/svg/turn-back.svg" /></li>
+                            </ul>
+                        </div>
+                        <!-- col-sm-10 kpi-header -->
+
+                        <div ng-show="kpiInfo.kpiData.loaded && !kpiInfo.kpiData.error">
+                            <div class="col-sm-12 kpi-body-back">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4><small>Last day</small></h4>
+                                        <h3><img ng-src="{{kpiInfo.kpiData.history.trendDaysDirectionSvg}}"></img> {{kpiInfo.kpiData.history.trendDays}}</h3>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4><small>This week</small></h4>
+                                        <h3><img ng-src="{{kpiInfo.kpiData.history.trendWeeksDirectionSvg}}"></img> {{kpiInfo.kpiData.history.trendWeeks}}</h3>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4><small>This month</small></h4>
+                                        <h3><img ng-src="{{kpiInfo.kpiData.history.trendMonthsDirectionSvg}}"></img> {{kpiInfo.kpiData.history.trendMonths}}</h3>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4><small>This year</small></h4>
+                                        <h3><img ng-src="{{kpiInfo.kpiData.history.trendYearsDirectionSvg}}"></img> {{kpiInfo.kpiData.history.trendYears}}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div align="center" class="col-sm-12 kpi-footer"></div>
+                        </div>
+
+                        <div class="spinner" ng-hide="kpiInfo.kpiData.loaded">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div>
+		
+						<div ng-show="kpiInfo.kpiData.loaded && kpiInfo.kpiData.error">
+							<div class="col-sm-12 error-text"  style="">
+								<h4 class="ng-binding" >No data found!</h4>
+							</div>
+						</div>
+
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- flip_main -->
+            </div>
+            <!-- face back -->
+        </div>
+        <!-- card -->
+    </div>
+    <!-- box-number-kpi -->
+</div>
+<!-- col-sm-3 -->

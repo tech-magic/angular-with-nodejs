@@ -1,0 +1,12 @@
+{
+	"helptext-numofactiveusers": "Sample help text message for No. of active users",
+	"helptext-sessionperuser": "Sample help text message for No. of sessions",
+	"helptext-sessionsPerUser": "Sample help text message for Sessions/Active user",
+	"helptext-avgsessionduration": "Sample help text message for Avg. session length(s)",
+	"helptext-numofproducts": "Sample help text message for No. of products registered",
+	"helptext-numberofpossitiveres": "Sample help text message for resolved issues",
+	"helptext-numberofserviceorders": "Sample help text message for service orders",
+	"helptext-numberofproddownloads": "Sample help text message for number of product downloads",
+	"helptext-numberofprodupdates" : "Sample help text message for number of product updates",
+	"helptext-numberofviolatedslas" : "Sample help text message for violated SLA percentages"
+}

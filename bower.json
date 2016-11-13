@@ -1,0 +1,31 @@
+{
+  "name": "angular_nodejs_example",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "wimal perera <wipelk41@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "^0.3.1",
+    "angular-animate": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "ui-bootstrap": "^2.2.0",
+    "ngstorage": "ng-storage#^0.4.2",
+    "moment": "^2.16.0",
+    "angular-translate": "^2.13.0",
+    "angular-translate-loader-static-files": "^2.13.0"
+  }
+}

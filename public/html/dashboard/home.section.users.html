@@ -1,0 +1,47 @@
+<div class="row box-header">
+
+  <div class="col-md-2">
+    <ul class="list-inline">
+      <li><img src="public/svg/graphic-user.svg" /></li>
+      <li><h3>Users</h3></li>
+    </ul>
+  </div>
+
+  <div class="col-md-9">
+    <center><hr class="box-header-hr"/></center>
+  </div>
+
+  <div class="col-md-1">
+    <a class="link box-border-link pull-right" ui-sref="activeusers({org:defaultTenant})" >More</a>
+  </div>
+
+</div> <!-- row box-header -->
+
+<div class="row" ng-controller="UsersCommonCTRL">
+  <div ng-show="status.dataLoaded">
+    <magic-number-kpi kpi-info="getKPIInfo('numofactiveusers')" enabled="data.permissions.dashboardUsers_activeUsers" ></magic-number-kpi>
+    <magic-number-kpi kpi-info="getKPIInfo('sessionperuser')" enabled="data.permissions.dashboardUsers_noOfsessions" ></magic-number-kpi>
+    <magic-number-kpi kpi-info="getKPIInfo('sessionsPerUser')" enabled="data.permissions.dashboardUsers_activeUserSessions" ></magic-number-kpi>
+    <magic-number-kpi kpi-info="getKPIInfo('avgsessionduration')" enabled="data.permissions.dashboardUsers_avgSessionLength" ></magic-number-kpi>
+  </div>
+  <div ng-show="status.isError">
+    <div class="col-sm-12">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="face front">
+            <div class="error-text-lg" align="center">
+              <h3 ng-bind="data.errorText"></h3>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>    
+  <div class="spinner" ng-hide="status.dataLoaded || status.isError">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+</div><!-- row -->
