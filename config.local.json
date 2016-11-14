@@ -5,8 +5,8 @@
     }
   },
   "business":{
-  	"business_base_url":"https://github.com/tech-magic/angular-with-nodejs/tree/master/mocks",
-    "rest_path":"/business/api",
+  	"business_host":"https://hosting-manager.github.io",
+    "rest_path":"/angular-with-nodejs/business/api",
     "content_type": "application/json"
   }
 }

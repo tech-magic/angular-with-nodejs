@@ -9,19 +9,20 @@ module.exports = function(configs) {
   var router = express.Router({mergeParams: true, strict: true});
 
   var routeConfigs = {
-    'numofactiveusers' : {"url":'/no_of_active_users.json',"type":'s'},
-    'sessionperuser' : {"url":'/no_of_sessions.json',"type":'s'},
-    'sessionsPerUser' : {"url":'/no_of_sessions_per_user.json',"type":'s'},
-    'avgsessionduration' : {"url":'/average_session_duration.json',"type":'s'}
+    'numofactiveusers' : {"url":'/no_of_active_users.json'},
+    'sessionperuser' : {"url":'/no_of_sessions.json'},
+    'sessionsPerUser' : {"url":'/no_of_sessions_per_user.json'},
+    'avgsessionduration' : {"url":'/average_session_duration.json'}
   }
 
   function constructUrl(req, res, path) {
     res.contentType(configs.get('business:content_type'));
 
-    var url = configs.get('business:business_base_url') +
+    var url = configs.get('business:business_host') +
       configs.get('business:rest_path') +
-          path.url + '?' +
-          "type=" + path.type;
+          path.url;
+
+    console.log(url);      
     
     return url;
   };
@@ -37,6 +38,8 @@ module.exports = function(configs) {
         
         var result = {};
 
+        console.log()
+
         result.numofactiveusers = res_numofactiveusers;
         result.sessionperuser = res_sessionperuser;
         result.sessionsPerUser = res_sessionsPerUser;
@@ -50,8 +53,8 @@ module.exports = function(configs) {
 
   });
 
-  function getFetch(req, res, reqObj) {
-    return fetch(constructUrl(req, res, reqObj), {
+  function getFetch(req, res, path) {
+    return fetch(constructUrl(req, res, path), {
       method: 'get'
     })
     .then((response) => {
