@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,200,100,300);
+
+@font-face {
+  font-family: 'Ico-Moon';
+  src: url('../fonts/icomoon.ttf');
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Open Sans' !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+  font-family: 'Open Sans' !important;
+}
+
+h5 {
+  font-size: 15px !important;
+}
+
+.container-wrapper {
+	position: relative; 
+	width: 100%
+}
+
+.align-center {
+	position: absolute;
+  top: 50%;
+  left: 44%;
+  margin-right: -50%;
+  padding-top: 7px;
+}
+
+.nav-align-center {
+	padding-top: 7px;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none !important;
+}
+
+.error-text-lg {
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 18px;
+  margin: 100px auto;
+}
+
+.error-text {
+    font-family: 'Raleway';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-size: 12px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.error-text-chart {
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 18px;
+  margin: 140px auto;
+}
+
+.reg-glyph {
+    font-weight: 400 !important;
+    font-size: 15px;
+    color: #333;
+}
+
+.h5-override {
+  font-size: 13px !important;
+}

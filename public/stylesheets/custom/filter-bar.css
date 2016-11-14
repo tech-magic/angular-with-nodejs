@@ -1,0 +1,47 @@
+.filter-bar-no-padding{
+	background: #E9E9E9;
+	border: 1px solid #D6D6D6;
+	height: 50px;
+	margin-top: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+    right: 0;
+    margin-left: 0 !important;
+}
+
+.filter-dropdown {
+	background: #F2F2F2 !important;
+	border: 1px solid #CECECE;
+	border-radius: 0 !important;
+	width: 170px !important;
+	text-align: left !important;
+}
+
+.caret {
+	position: absolute;
+    left: 90%;
+    top: 45%;
+}
+
+.link  {
+	font-family: 'Raleway';
+	font-size: 12px;
+	color: #008BB3;
+	letter-spacing: 0px;
+}
+
+.filter-text {
+	font-family: 'Raleway';
+	font-size: 12px !important;
+	color: #9B9B9B !important;
+	letter-spacing: 0px;
+}
+
+.filter-heading-text {
+	font-family: 'Raleway';
+	font-size: 14px;
+	color: #4A4A4A !important;
+	letter-spacing: 0px;
+}

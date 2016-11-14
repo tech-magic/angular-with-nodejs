@@ -1,0 +1,236 @@
+.heading {
+	width: 100%;
+	text-align: left;
+	border-top: 1px solid #DDDDDD; 
+	line-height:0.1em; 
+}
+
+.box-header {
+	/*margin-top: 20px;
+	margin-bottom: 20px;*/
+}
+
+.box-header-hr {
+	width: 90%;
+	vertical-align: middle;
+}
+
+.box-header-hr {
+	margin-left: -50px;
+	margin-top: 32px;
+	width: 112%;
+}
+
+.box-border-link {
+	margin-top: 20px;
+}
+
+.box-number-kpi {
+	background: #fff;
+	height: 250px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.box-graph-kpi {
+	border: 1px solid #DDDDDD;
+	background: #F8F8F8;
+	height: 250px;
+/*	padding-left: 15px;
+	padding-right: 15px;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.box-graph-alignment {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.box-graph-kpi-lg {
+	border: 1px solid #DDDDDD;
+	background: #F8F8F8;
+	height: 350px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 30px;
+}
+
+.box-graph-kpi-ex-lg {
+	border: 1px solid #DDDDDD;
+	background: #F8F8F8;
+	height: 650px;
+/*	padding-left: 15px;
+	padding-right: 15px;*/
+	margin-top: 30px;
+}
+
+.kpi-header {
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 25%;
+	text-align: left;
+}
+
+.kpi-header-lg {
+	margin-top: 5px;
+	padding-left: 0px !important;
+	text-align: left;
+}
+
+.flip-btn {
+	float: right !important;
+	margin-right: 20px;
+	padding-top: 7px;
+}
+
+.kpi-body {
+	height: 50%;
+	text-align: center;
+	padding-top: 10px;
+	font-family: .SFNSDisplay-Regular;
+	font-size: 64px;
+	color: #4A4A4A;
+	letter-spacing: -1.55px;
+}
+
+.kpi-body-back {
+	height: 70%;
+	text-align: center;
+	padding-top: 5px;
+	font-family: .SFNSDisplay-Regular;
+	font-size: 15px;
+	color: #4A4A4A;
+}
+
+.kpi-footer {
+	height: 25%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.box-list-kpi {
+	height: 350px;
+	background: #F8F8F8;
+    border: 1px solid #DDDDDD;
+}
+
+.nr-positive {
+  font-family: .SFNSDisplay-Regular;
+  font-size: 20px;
+  color: #80D423;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+.nr-negative {
+  font-family: .SFNSDisplay-Regular;
+  font-size: 20px;
+  color: #CC5A5A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+.nr-flat {
+  font-family: .SFNSDisplay-Regular;
+  font-size: 20px;
+  color: #E8B12A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+/* Icons */
+.icon-row {
+  margin: 5px -25px 0 15px;
+}
+
+.icon-green {
+  background-image: url(../images/icons/ic_GREEN.png);
+  background-position: 25% 50%;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 19px;
+  padding-top: 2px;
+  width: 100%;
+}
+
+.icon-red {
+  background-image: url(../images/icons/ic_RED.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 19px;
+  padding-top: 2px;
+  padding-left: 25px;
+}
+
+.icon-yellow {
+  background-image: url(../images/icons/ic_YELLOW.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 19px;
+  padding-top: 2px;
+  padding-left: 25px;
+}
+
+.trend-icon-font-size {
+  /* Or size of icon + spacing */
+  font-size: 24px;
+}
+
+.iconssmall {
+    -moz-background-size: 10px;
+    background-size: 10px;
+    image-rendering:-moz-crisp-edges;
+    -ms-interpolation-mode:nearest-neighbor;
+}
+
+.kpi-further {
+	width: 100%
+	height: 10%;
+	vertical-align: bottom;
+	margin-top: 15px;
+	margin-bottom: 10px;
+
+}
+
+.tooltip.bottom .tooltip-inner {
+	background-color: #3c8dbc;
+	font-family: 'Open Sans';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+.tooltip.bottom .tooltip-arrow {
+	border-bottom: 5px solid #3c8dbc !important;
+}
+
+.tooltip.left .tooltip-inner {
+	background-color: #3c8dbc;
+	font-family: 'Open Sans';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+.tooltip.left .tooltip-arrow {
+	border-left: 5px solid #3c8dbc !important;
+}
+
+.tooltip.right .tooltip-inner {
+	background-color: #3c8dbc;
+	font-family: 'Open Sans';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+.tooltip.right .tooltip-arrow {
+	border-right: 5px solid #3c8dbc !important;
+}
+
+.tooltip.top .tooltip-inner {
+	background-color: #3c8dbc;
+	font-family: 'Open Sans';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+.tooltip.top .tooltip-arrow {
+	border-top: 5px solid #3c8dbc !important;
+}

@@ -1,0 +1,82 @@
+.navbar-blue {
+	background: #3c8dbc !important;
+	border: 1px solid #006F8F;
+	border-radius: 0 !important;
+}
+
+.navbar-logo-text {
+	font-family: 'Raleway';
+	font-weight: 300;
+	font-size: 24px;
+	color: #FFFFFF !important;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+.navbar-logo-stop {
+	background: url('../svg/logo-elipsis.svg')
+}
+
+.align-initial {
+	vertical-align: initial;
+}
+
+.nav-lead {
+	font-family: 'Raleway';
+	font-size: 18px;
+	color: #FFFFFF !important;
+	letter-spacing: 0px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+.nav-link {
+	font-family: 'Raleway';
+	font-size: 12px;
+	color: #FFFFFF !important;
+	letter-spacing: 0px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+.nav-link-lg {
+	font-family: 'Raleway';
+	font-size: 15px;
+	color: #FFFFFF !important;
+	letter-spacing: 0px;
+	text-transform: capitalize;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+.nav-link-button{
+	margin-top: 10px;
+}
+
+.nav-dropdown {
+	background: #3C8DBC !important;
+	border: 1px solid #3C8DBC;
+	min-width: 50px;
+	text-align: left !important;
+}
+
+.nav-dropdown:hover {
+	border: 1px solid #3C8DBC;
+}
+
+.nav-dropdown:focus {
+	border: 1px solid #3C8DBC;
+	outline: 0 !important;
+}
+
+.nav-dropdown:active {
+	border: 1px solid #3C8DBC;
+	outline: 0 !important;
+}
+
+.nav-text {
+	font-family: 'Raleway';
+	font-size: 12px !important;
+	color: #ffffff !important;
+	letter-spacing: 0px;
+}

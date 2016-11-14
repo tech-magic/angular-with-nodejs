@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('icomoon/icomoon.eot?8z8pcq');
+    src:    url('icomoon/icomoon.eot?8z8pcq#iefix') format('embedded-opentype'),
+        url('icomoon/icomoon.ttf?8z8pcq') format('truetype'),
+        url('icomoon/icomoon.woff?8z8pcq') format('woff'),
+        url('icomoon/icomoon.svg?8z8pcq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_protective_case:before {
+    content: "\e935";
+}
+.icon-icon_brightness:before {
+    content: "\e936";
+}
+.icon-icon_cold:before {
+    content: "\e937";
+}
+.icon-icon_halfbattery:before {
+    content: "\e938";
+}
+.icon-icon_signal:before {
+    content: "\e939";
+}
+.icon-icon_software-update:before {
+    content: "\e93a";
+}
+.icon-icon_temp:before {
+    content: "\e93b";
+}
+.icon-icon_wifi:before {
+    content: "\e93c";
+}
+.icon-empty_battery:before {
+    content: "\e933";
+}
+.icon-hand_icon:before {
+    content: "\e934";
+}
+.icon-icon-storage-small-2:before {
+    content: "\e911";
+}
+.icon-icon-offcanvas-dash:before {
+    content: "\e932";
+}
+.icon-icon-logo-eb:before {
+    content: "\e92f";
+}
+.icon-icon-logo-Halebop:before {
+    content: "\e930";
+}
+.icon-icon-logo-Telia:before {
+    content: "\e931";
+}
+.icon-icon-offcanvas-contactsupport:before {
+    content: "\e92a";
+}
+.icon-icon-offcanvas-deals:before {
+    content: "\e92b";
+}
+.icon-icon-offcanvas-myproducts:before {
+    content: "\e92c";
+}
+.icon-icon-offcanvas-repair:before {
+    content: "\e92d";
+}
+.icon-icon-offcanvas-troubleshoot:before {
+    content: "\e92e";
+}
+.icon-icon-update:before {
+    content: "\e929";
+}
+.icon-failure:before {
+    content: "\e924";
+}
+.icon-success:before {
+    content: "\e925";
+}
+.icon-backup:before {
+    content: "\e926";
+}
+.icon-icon-phonehealth:before {
+    content: "\e927";
+}
+.icon-icon-usagetips:before {
+    content: "\e928";
+}
+.icon-go-hand:before {
+    content: "\e922";
+}
+.icon-stop-hand:before {
+    content: "\e923";
+}
+.icon-icon_play:before {
+    content: "\e921";
+}
+.icon-arrowback:before {
+    content: "\e920";
+}
+.icon-icon_category_hiddenfeatures:before {
+    content: "\e914";
+}
+.icon-icon_category_accessories:before {
+    content: "\e915";
+}
+.icon-icon_category_battery:before {
+    content: "\e916";
+}
+.icon-icon_category_callingandreception:before {
+    content: "\e917";
+}
+.icon-icon_category_camera:before {
+    content: "\e918";
+}
+.icon-icon_category_comparison:before {
+    content: "\e919";
+}
+.icon-icon_category_gettingstarted:before {
+    content: "\e91a";
+}
+.icon-icon_category_news:before {
+    content: "\e91b";
+}
+.icon-icon_category_security:before {
+    content: "\e91c";
+}
+.icon-icon-category_lifehack:before {
+    content: "\e91d";
+}
+.icon-icon-category-HotApps:before {
+    content: "\e91e";
+}
+.icon-icon-category-TipsWhenTravelling:before {
+    content: "\e91f";
+}
+.icon-icon-diagnostics2:before {
+    content: "\e912";
+}
+.icon-icon-battery-small:before {
+    content: "\e913";
+}
+.icon-icon_software_update:before {
+    content: "\e910";
+}
+.icon-icon_volume_grey:before {
+    content: "\e90e";
+}
+.icon-icon_proximity_grey:before {
+    content: "\e90f";
+}
+.icon-icon-audiojack-grey:before {
+    content: "\e90d";
+}
+.icon-disclosure-indicator-left:before {
+    content: "\e90a";
+}
+.icon-disclosure-indicator-right:before {
+    content: "\e90b";
+}
+.icon-hand-tap:before {
+    content: "\e90c";
+}
+.icon-sound:before {
+    content: "\e909";
+}
+.icon-icon-diagnostics:before {
+    content: "\e908";
+}
+.icon-contact-support:before {
+    content: "\e900";
+}
+.icon-current-deals:before {
+    content: "\e901";
+}
+.icon-home:before {
+    content: "\e902";
+}
+.icon-my-devices:before {
+    content: "\e903";
+}
+.icon-my-profile:before {
+    content: "\e904";
+}
+.icon-repair:before {
+    content: "\e905";
+}
+.icon-tips-and-tricks:before {
+    content: "\e906";
+}
+.icon-troubleshoot:before {
+    content: "\e907";
+}
+
+.icomoon {
+    font-size: 40px;
+    color: #4A4A4A;
+}
+
+.icomoon-nav {
+    font-size: 25px;
+    color: #FFFFFF;
+}

@@ -9,17 +9,15 @@ var techMagicApp = angular.module('techMagicApp', [
 
 techMagicApp.run(
 	['$rootScope', '$http', '$state', 
-	 '$timeout', '$location','$localStorage','$window', 'TechMagicService', 
+	 '$timeout', '$location','$localStorage','$window', 
 	function(
 		$rootScope, $http, $state, 
-		$timeout, $location, $localStorage, $window, TechMagicService) {
+		$timeout, $location, $localStorage, $window) {
 
     var currPath = $location.$$path;
     console.log(currPath);
 
-		console.log(TechMagicService.myMethod());
-
-    $rootScope.data = {};
+		$rootScope.data = {};
     $rootScope.data.permissions = {};
     $rootScope.defaultTenant = 'halebop';
     $rootScope.isAuthorized = true;
@@ -34,22 +32,6 @@ techMagicApp.run(
     $state.go('home', {org:$rootScope.defaultTenant});
 	}]
 );
-
-techMagicApp.service('TechMagicService', ['$rootScope', '$http', function($rootScope, $http) {
-    
-    function privateFunc() {
-    	console.log('Inside private func ...');
-    	return "power of angular";
-    }
-
-    var myMethod = function() {
-    	return privateFunc();
-    }
-
-    return {
-    	myMethod: myMethod
-    };
-}]);
 
 techMagicApp.factory('VisualizerConfigService', function() {
     return {
@@ -150,39 +132,6 @@ techMagicApp.service('FilterBindingService', ['$rootScope', function($rootScope)
     if (duration) {
       viewData.duration = duration;
     }
-
-    /*if (ranges) {
-      var start = new Date(ranges[0], ranges[1], ranges[2]);
-      var end   = new Date(ranges[3], ranges[4], ranges[5]);
-      var when  = moment(new Date(), 'YYYY-MM-DD');
-      var range = moment.range(start, end);
-
-      viewData.durationRange = moment(start).format('YYYY-MM-DD') + '-' + moment(end).format('YYYY-MM-DD');
-
-      if (range.diff('days') == 0 && !when.within(range)) {
-        viewData.duration = 'Last day';
-        data.duration = 'day';
-      }
-      else if (range.diff('days') == 6 && !when.within(range)) {
-        viewData.duration = 'This week';
-        data.duration = 'week';
-      }
-      else if ((range.diff('days') == 27 || range.diff('days') == 28 || range.diff('days') == 29 || range.diff('days') == 30)
-        && !when.within(range)) {
-        viewData.duration = 'This month';
-        data.duration = 'month2';
-      }
-      else if ((range.diff('days') == 364 || range.diff('days') == 365) && !when.within(range)) {
-        viewData.duration = 'This year';
-        data.duration = 'year';
-      }
-      else {
-        viewData.duration = 'This week';
-        data.duration = 'week';
-        viewData.durationRange = moment(this.durationRanges.rangesId['week'][0]).format('YYYY-MM-DD') + '-' +
-          moment(this.durationRanges.rangesId['week'][1]).format('YYYY-MM-DD');
-      }
-    }*/
   }
 
   var getViewDuration = function() {
@@ -379,6 +328,18 @@ techMagicApp.factory('DataManipulationService', function() {
     }
 });
 
+techMagicApp.factory('ControlTowerUtils', function() {
+    var isInteger = function(value) {
+      return !isNaN(value) && 
+         parseInt(Number(value)) == value && 
+         !isNaN(parseInt(value, 10));
+    };
+
+    return {
+      isInteger: isInteger
+    }
+});  
+
 techMagicApp.filter('formatter', ['$filter', function($filter) {
   return function(value, filterName) {
     if(value === parseInt(value, 10)) {
@@ -389,6 +350,16 @@ techMagicApp.filter('formatter', ['$filter', function($filter) {
       } else {
         return "";
       }
+    }
+  };
+}]);
+
+techMagicApp.filter('cconumber', ['$filter', 'ControlTowerUtils', function ($filter, ControlTowerUtils) {
+  return function (input, decimals) {
+    if(ControlTowerUtils.isInteger(input)) {
+      return $filter('number')(input);
+    } else {
+      return $filter('number')((Math.round(input * 100) / 100));
     }
   };
 }]);

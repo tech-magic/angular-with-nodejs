@@ -34,3 +34,28 @@ techMagicApp
         }
     });
 
+$(function() {
+    $(document).on("click", ".flippable a", function() {
+        if (!e.stopPropagation) {
+            e.cancelBubble = true;
+            return;
+        }
+        e.stopPropagation();
+    });
+
+    $(document).on("click", ".flippable", function() {
+        $(this).toggleClass("flipped");
+        return false;
+    });
+
+    $(document).on({
+        'mouseenter': function (e) {
+            $(this).tooltip('show');
+        },
+        'mouseeleave': function (e) {
+            $(this).tooltip('hide');
+        }
+    }, '*[rel=tooltip]');
+});
+
+
