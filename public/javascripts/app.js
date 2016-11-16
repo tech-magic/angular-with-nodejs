@@ -1,8 +1,9 @@
 var techMagicApp = angular.module('techMagicApp', [
     'ui.router',
+    'ui.bootstrap',
     'ngSanitize',
     'ngStorage',
-    'usersCommonCTRLs',
+    'techMagicCTRLs',
     'tMTranslate'
 ]);
 

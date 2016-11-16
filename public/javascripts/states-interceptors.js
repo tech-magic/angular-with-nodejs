@@ -43,15 +43,6 @@ techMagicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider'
         		templateUrl: '/public/html/common/common.section.footer.html'
       		}
     	}
-    })
-  	.state('login',{
-		  url: '/login',
-    	cache: false,
-		  views: {
-        '': {
-          templateUrl: '/public/html/login/signin.signin.html'
-        }
-		  }
     });
 
     $httpProvider.interceptors.push(['$q', '$location', '$localStorage','$rootScope', function($q, $location, $localStorage, $rootScope) {

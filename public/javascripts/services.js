@@ -283,4 +283,133 @@ techMagicApp.service('DataManipulationService', function() {
     }
 });
 
+techMagicApp.service('CommonAttributeSharingService', ['$http', '$cacheFactory', function($http, $cacheFactory) {
+  var welcomeText = {};
+  welcomeText.welcomeTextDay = 'Last day ';
+  welcomeText.welcomeTextWeek = 'This week ';
+  welcomeText.welcomeTextMonth = 'This month ';
+  welcomeText.welcomeTextYear = 'This year ';
+
+  var filter = {};
+  filter.cities = [];
+  filter.devices = [];
+
+  var getWelcomeText = function(duration) {
+    switch (duration) {
+      case "day" : {
+        return welcomeText.welcomeTextDay;
+        break;
+      }
+      case "week" : {
+        return welcomeText.welcomeTextWeek;
+        break;
+      }
+      case "month2" : {
+        return welcomeText.welcomeTextMonth;
+        break;
+      }
+      case "year" : {
+        return welcomeText.welcomeTextYear;
+        break;
+      }
+    }
+  };
+
+  var getCitiesForFiltering = function() {
+
+    if (filter.cities.length !== 0) {
+      return filter.cities;
+    }
+    else {
+      $http.get("/api/filters/listallcities", {
+        cache: true
+      })
+      .success(function(data){
+        var data = data["out"];
+        var evalData = eval(data);
+
+        if(evalData.out) {
+          evalData.out.forEach(function(currUsrfriendlyCity){
+            if(currUsrfriendlyCity.city.indexOf(',') !== -1) {
+              var cityN = currUsrfriendlyCity.city.lastIndexOf(',');
+              if(!(cityN > (currUsrfriendlyCity.city.length - 1))) {
+                currUsrfriendlyCity = currUsrfriendlyCity.city.substring(cityN + 1);
+                currUsrfriendlyCity = currUsrfriendlyCity.trim();
+              }
+            }
+
+            filter.cities.push({
+              'locationId' : currUsrfriendlyCity,
+              'location': currUsrfriendlyCity
+            }); 
+          });
+        }  
+
+        filter.cities.sort(function(a,b){
+          if(a.location === b.location){
+            return a.locationId > b.locationId ? 1 : a.locationId < b.locationId ? -1 : 0;
+          }
+          return a.location > b.location ? 1 : -1;
+        });
+
+        filter.cities.unshift({
+          'locationId' : '',
+          'location': ''
+        });
+
+      })
+      .error(function(error){
+      });
+
+      return filter.cities;
+    }
+  };
+
+  var getDevicesForFiltering = function() {
+    if (filter.devices.length !== 0) {
+      return filter.devices;
+    }
+    else {
+      $http.get("/api/filters/listalldevices", {
+        cache: true
+      })
+      .success(function(data){
+
+        var data = data["out"];
+        var evalData = eval(data);
+
+        filter.devices.push({
+          'deviceId': '',
+          'deviceCode': '',
+          'manufacturer': '',
+          'deviceText': ''
+        });
+
+        if(evalData.out) {
+          evalData.out.forEach(function(device){
+            filter.devices.push({
+              'deviceId': '',
+              'deviceCode': device.model,
+              'manufacturer': device.manufacturer,
+              'deviceText': device.manufacturer + " " + device.model
+            });
+          });
+        }  
+      })
+      .error(function(error){
+
+      });
+
+      return filter.devices;
+    }
+  }
+
+  return {
+    getWelcomeText: getWelcomeText,
+    getCitiesForFiltering: getCitiesForFiltering,
+    getDevicesForFiltering: getDevicesForFiltering
+  };
+
+}]);
+
 

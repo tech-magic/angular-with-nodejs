@@ -26,6 +26,8 @@
     "ngstorage": "ng-storage#^0.4.2",
     "moment": "^2.16.0",
     "angular-translate": "^2.13.0",
-    "angular-translate-loader-static-files": "^2.13.0"
+    "angular-translate-loader-static-files": "^2.13.0",
+    "angular-ui-select3": "ui-select#*",
+    "angular-bootstrap": "^2.2.0"
   }
 }

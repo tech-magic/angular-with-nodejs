@@ -43,11 +43,13 @@ function isLoggedIn(req, res, next) {
 }
 
 app.get('/login', function(req, res) {
-  res.sendFile('views/login.html', {"root": __dirname});
+  res.render('login.html');
 });
 
 var routes_consolidated = require('./routes/api.consolidated')(configs);
 app.use('/api/consolidated/', isLoggedIn, routes_consolidated);
+var routes_filters = require('./routes/api')(configs);
+app.use('/api/filters/', isLoggedIn, routes_filters);
 
 app.get('/', isLoggedIn, function (req, res) {
   res.redirect('/home');

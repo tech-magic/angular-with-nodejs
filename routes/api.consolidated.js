@@ -1,11 +1,10 @@
 var queryString = require('querystring');
-var request = require('request');
 var fetch = require("node-fetch");
 var Promise = require('bluebird');
+var express = require('express');
 
 module.exports = function(configs) {
 
-  var express = require('express');
   var router = express.Router({mergeParams: true, strict: true});
 
   var routeConfigs = {

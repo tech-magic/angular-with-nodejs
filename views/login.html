@@ -1,8 +1,14 @@
 <html>
   <head>
+    <% include partials/section.home.styles.html %>
   </head>
   <body>
+    <% include partials/section.login.menubar.html %> 
+    <div class="container-fluid"></div>
+    <div style="height: 100px;"></div> 
     <center>
+    <p style="color: red;">Use username <b><u>wimal</u></b> with any password to login to this demo app. </p>
+    <p style="color: green;">Please refer modules/auth/index.js file to implement a proper custom authentication strategy.</p>
     <form action="/login" method="post">
       <table>
       <tr>

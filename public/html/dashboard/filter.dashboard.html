@@ -1,1 +1,47 @@
-<p>Here is the dashboard filters section</p>
+<div class="row filter-bar-no-padding"  ng-controller="NavigationCTRL">
+
+    <div class="col-md-12" align="center">
+      <div class="row nav-align-center">
+        <ul class="list-inline">
+
+          <li class="filter-heading-text">Filters</li>
+
+          <div class="btn-group">
+          <input type="text" class="btn btn-default search-field filter-dropdown filter-text ng-cloak" placeholder="{{data.location}}" ng-model="data.selectedLocation" typeahead-select-on-exact="true" typeahead-on-select="recordFilter($item, $model, $label, $event, 'LC')" uib-typeahead="loc as location.location for location in data.locations | filter:$viewValue | limitTo:8">
+          </div>
+
+          <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-default filter-dropdown filter-text ng-cloak">{{data.os}} <span class="caret pull-right"></span></button> 
+            <ul class="dropdown-menu scrollable-menu">
+              <li ng-repeat="os in data.oss">
+                <a href ng-click="recordFilter(null, null, null, $event, 'OS')" name="{{os}}" class="filter-text">{{os}}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <input type="text" class="btn btn-default search-field filter-dropdown filter-text ng-cloak" placeholder="{{data.device}}" ng-model="data.selectedDevice" typeahead-select-on-exact="true" typeahead-on-select="recordFilter($item, $model, $label, $event, 'DV')" uib-typeahead="dv as device.deviceCode for device in data.devices | filter:$viewValue | limitTo:8">
+          </div>
+
+          <div class="btn-group">
+                <button type="button" data-toggle="dropdown" class="btn btn-default filter-dropdown filter-text ng-cloak">{{data.duration}} <span class="caret pull-right"></span></button>
+                <ul class="dropdown-menu scrollable-menu">
+                  <li ng-repeat="duration in data.durations">
+                    <a href ng-click="recordFilter(null, null, null, $event, 'DU')" name="{{duration.durationId}}" class="filter-text">{{duration.durationText}}</a>
+                  </li>
+                </ul>
+              </div>
+
+          <div class="btn-group filter-btn">
+            <a id='test2' href ng-click="recordFilter(null, null, null, $event, 'RESET')" data-toggle="reset filters" data-placement="bottom" title="reset filters" class="link">
+              Reset
+            </a>
+          </div>
+
+        </ul>
+
+      </div>
+    </div>
+
+</div> <!-- row -->
+
